@@ -12,10 +12,15 @@
     ../../modules/fonts.nix
     ../../modules/nix-settings.nix
     ../../modules/services.nix
+    ../../modules/desktop-services.nix
+    ../../modules/thunar.nix
+    ../../modules/qt.nix
+    ../../modules/power.nix
     ../../modules/packages.nix
+    ../../modules/home-manager.nix
   ];
 
-  networking.hostName = "isolyth";
+  networking.hostName = "theseus";
 
   # Pin to first install version. Don't bump.
   system.stateVersion = "25.11";

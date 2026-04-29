@@ -2,8 +2,7 @@
   description = "Isolyth's NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     disko = {
       url = "github:nix-community/disko";
@@ -11,26 +10,28 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, disko, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, disko, home-manager, dms, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
     in {
-      nixosConfigurations.isolyth = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.theseus = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs pkgs-unstable; };
+        specialArgs = { inherit inputs; };
         modules = [
           disko.nixosModules.disko
           ./disko-config.nix
-          ./hosts/isolyth
+          home-manager.nixosModules.home-manager
+          ./hosts/theseus
         ];
       };
     };

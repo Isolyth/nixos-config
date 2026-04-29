@@ -18,9 +18,12 @@
     # Shell / TUI
     zsh-completions
     starship
-    fzf ripgrep fd bat eza zoxide
+    fzf ripgrep fd bat eza zoxide jq
     btop fastfetch
     tmux
+    kitty
+    
+    claude-code
 
     # Hyprland ecosystem
     waybar
@@ -32,8 +35,7 @@
     grim slurp
     wl-clipboard
     cliphist
-    mako
-    swww
+    awww                        # formerly swww — wallpaper daemon
     brightnessctl
     pavucontrol
     networkmanagerapplet

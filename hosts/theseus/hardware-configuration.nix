@@ -1,6 +1,6 @@
 # PLACEHOLDER — overwrite this from the live installer with:
 #   nixos-generate-config --root /mnt --no-filesystems --dir /tmp/hwgen
-#   cp /tmp/hwgen/hardware-configuration.nix ./hosts/isolyth/hardware-configuration.nix
+#   cp /tmp/hwgen/hardware-configuration.nix ./hosts/theseus/hardware-configuration.nix
 #
 # --no-filesystems is important: disko owns the filesystem definitions, the
 # hardware file should only contain hardware/kernel-module detections.
