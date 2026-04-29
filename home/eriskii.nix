@@ -12,6 +12,8 @@
     ./modules/zsh.nix
     ./modules/vscode.nix
     ./modules/matugen.nix
+    ./modules/idle.nix
+    ./modules/btop.nix
   ];
 
   home.username = "eriskii";

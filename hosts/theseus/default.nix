@@ -16,6 +16,7 @@
     ../../modules/thunar.nix
     ../../modules/qt.nix
     ../../modules/power.nix
+    ../../modules/swap.nix
     ../../modules/packages.nix
     ../../modules/home-manager.nix
   ];

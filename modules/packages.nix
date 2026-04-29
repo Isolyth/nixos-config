@@ -20,7 +20,7 @@
     # Shell / TUI
     zsh-completions
     fzf ripgrep fd bat eza zoxide jq
-    btop fastfetch
+    btop-cuda fastfetch
     tmux
     kitty
     
@@ -84,6 +84,7 @@
 
     # System utils
     htop iotop lsof
+    e2fsprogs                    # chattr, lsattr, etc — needed for btrfs swapfile NoCoW
     pciutils usbutils
     nvtopPackages.nvidia
     smartmontools
