@@ -17,7 +17,6 @@
 
     # Shell / TUI
     zsh-completions
-    starship
     fzf ripgrep fd bat eza zoxide jq
     btop fastfetch
     tmux
@@ -50,6 +49,26 @@
     chromium
     mpv
     obs-studio
+
+    # GUI apps — communication
+    vesktop                       # Discord (electron-free wrapper)
+
+    # GUI apps — notes / docs
+    obsidian
+    kdePackages.okular            # PDF viewer
+
+    # GUI apps — making
+    bambu-studio                  # Bambu Lab printer slicer
+
+    # GUI apps — image / photo
+    darktable                     # RAW photo workflow
+    krita                         # painting / pixel art
+    inkscape                      # vector drawing
+    kdePackages.gwenview          # quick image viewer
+
+    # GUI apps — archive / shortcuts
+    kdePackages.ark               # archive manager
+    kdePackages.spectacle         # screenshot tool
 
     # System utils
     htop iotop lsof
