@@ -11,6 +11,7 @@
     ./modules/git.nix
     ./modules/zsh.nix
     ./modules/vscode.nix
+    ./modules/matugen.nix
   ];
 
   home.username = "eriskii";

@@ -12,7 +12,9 @@
     gcc gnumake cmake pkg-config
     rustup
     nodejs_22 bun
-    python3 uv
+    python3 python3Packages.pip pipx uv
+    jdk21 maven
+    cudaPackages.cudatoolkit
     docker-compose
 
     # Shell / TUI
@@ -35,6 +37,7 @@
     wl-clipboard
     cliphist
     awww                        # formerly swww — wallpaper daemon
+    matugen                     # material-you palette generator (DMS, vesktop theme)
     brightnessctl
     pavucontrol
     networkmanagerapplet
@@ -48,7 +51,16 @@
     firefox
     chromium
     mpv
+    vlc
     obs-studio
+    ffmpegthumbnailer            # video thumbs in Thunar etc
+
+    # Misc utilities
+    ncdu
+    hyprpicker                   # color picker
+    font-manager
+    libreoffice
+    prismlauncher                # Minecraft launcher
 
     # GUI apps — communication
     vesktop                       # Discord (electron-free wrapper)
