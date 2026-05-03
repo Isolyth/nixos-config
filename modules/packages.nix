@@ -83,6 +83,7 @@
     kdePackages.spectacle         # screenshot tool
 
     # System utils
+    sshpass
     htop iotop lsof
     e2fsprogs                    # chattr, lsattr, etc — needed for btrfs swapfile NoCoW
     pciutils usbutils

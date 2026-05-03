@@ -3,10 +3,8 @@
   # Tiered idle behavior:
   #   5 min  → DMS lock screen
   #   7 min  → blank displays (DPMS off)
-  #  30 min  → suspend to RAM
-  #
-  # before_sleep_cmd locks via DMS so we wake on the lock screen.
-  # after_sleep_cmd re-arms DPMS.
+  # No automatic suspend/hibernate — NVIDIA proprietary driver does not
+  # resume reliably on this box; sleep is manual only.
   services.hypridle = {
     enable = true;
     settings = {
@@ -25,10 +23,6 @@
           timeout = 420;            # 7 min
           on-timeout = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
           on-resume = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
-        }
-        {
-          timeout = 1800;           # 30 min
-          on-timeout = "systemctl suspend";
         }
       ];
     };

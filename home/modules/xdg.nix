@@ -13,8 +13,9 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        # Firefox: web + html
+        # Firefox: web + html + pdf
         "text/html" = "firefox.desktop";
+        "application/pdf" = "firefox.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
         "x-scheme-handler/about" = "firefox.desktop";
@@ -26,7 +27,8 @@
         "application/x-extension-xhtml" = "firefox.desktop";
         "application/x-extension-xht" = "firefox.desktop";
 
-        # VSCode: structured / source files
+        # VSCode: plain text + structured / source files
+        "text/plain" = "code.desktop";
         "application/json" = "code.desktop";
         "application/x-yaml" = "code.desktop";
         "text/yaml" = "code.desktop";
