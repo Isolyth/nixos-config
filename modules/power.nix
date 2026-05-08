@@ -23,9 +23,11 @@
   # Set power-profiles-daemon default to "performance" on boot.
   # ppd doesn't expose a "default profile" NixOS option, so we do it imperatively
   # in a one-shot service that runs after the daemon comes up.
+  # Hung off graphical.target because ppd's unit is After=multi-user.target —
+  # WantedBy=multi-user.target here would create an ordering cycle.
   systemd.services.set-power-profile-performance = {
     description = "Set power-profiles-daemon to performance";
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = [ "graphical.target" ];
     after = [ "power-profiles-daemon.service" ];
     requires = [ "power-profiles-daemon.service" ];
     serviceConfig = {

@@ -13,6 +13,13 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
+        # Terminal scheme handler — what xdg-terminal-exec / file managers use to spawn a terminal
+        "x-scheme-handler/terminal" = "kitty.desktop";
+
+        # Catch-all for files with no detected MIME (empty files) or generic binary
+        "application/octet-stream" = "code.desktop";
+        "inode/x-empty" = "code.desktop";
+
         # Firefox: web + html + pdf
         "text/html" = "firefox.desktop";
         "application/pdf" = "firefox.desktop";
@@ -45,7 +52,40 @@
         "text/javascript" = "code.desktop";
         "text/css" = "code.desktop";
         "text/markdown" = "code.desktop";
+        "text/x-markdown" = "code.desktop";
         "application/x-shellscript" = "code.desktop";
+
+        # Misc text formats commonly detected as their own MIME
+        "text/xml" = "code.desktop";
+        "application/xml" = "code.desktop";
+        "text/csv" = "code.desktop";
+        "text/tab-separated-values" = "code.desktop";
+        "application/x-desktop" = "code.desktop";
+        "text/x-log" = "code.desktop";
+        "text/x-sql" = "code.desktop";
+        "text/x-tex" = "code.desktop";
+        "application/x-ipynb+json" = "code.desktop";
+        "text/x-lua" = "code.desktop";
+        "text/x-ruby" = "code.desktop";
+        "text/x-java" = "code.desktop";
+        "text/x-kotlin" = "code.desktop";
+        "text/x-nix" = "code.desktop";
+
+        # VLC: video
+        "video/mp4" = "vlc.desktop";
+        "video/x-matroska" = "vlc.desktop";
+        "video/webm" = "vlc.desktop";
+        "video/quicktime" = "vlc.desktop";
+        "video/x-msvideo" = "vlc.desktop";
+        "video/mpeg" = "vlc.desktop";
+        "video/x-flv" = "vlc.desktop";
+        "video/3gpp" = "vlc.desktop";
+        "video/3gpp2" = "vlc.desktop";
+        "video/ogg" = "vlc.desktop";
+        "video/x-ms-wmv" = "vlc.desktop";
+        "video/x-ms-asf" = "vlc.desktop";
+        "video/mp2t" = "vlc.desktop";
+        "application/x-matroska" = "vlc.desktop";
       };
     };
   };

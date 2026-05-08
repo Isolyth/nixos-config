@@ -11,7 +11,9 @@
     vim neovim git gh
     gcc gnumake cmake pkg-config
     rustup
+    go
     nodejs_22 bun
+    codex
     python3 python3Packages.pip pipx uv
     jdk21 maven
     cudaPackages.cudatoolkit
@@ -19,12 +21,13 @@
 
     # Shell / TUI
     zsh-completions
-    fzf ripgrep fd bat eza zoxide jq
+    fzf ripgrep fd bat eza jq
     btop-cuda fastfetch
     tmux
     kitty
     
     claude-code
+    opencode
 
     # Hyprland ecosystem
     waybar
@@ -52,7 +55,7 @@
     chromium
     mpv
     vlc
-    obs-studio
+    (obs-studio.override { cudaSupport = true; })  # cudaSupport pulls in autoAddDriverRunpath so obs-nvenc-test gets /run/opengl-driver/lib in RUNPATH (NVENC test process otherwise fails: nvenc_lib)
     ffmpegthumbnailer            # video thumbs in Thunar etc
 
     # Misc utilities

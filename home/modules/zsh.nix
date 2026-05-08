@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -57,13 +57,6 @@
       rebuild-test = "sudo nixos-rebuild test --flake ~/nixos-config#theseus";
       gc-nix = "sudo nix-collect-garbage -d";
     };
-  };
-
-  # ── jump-around ──
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-    options = [ "--cmd" "cd" ];
   };
 
   # ── fuzzy finder ──

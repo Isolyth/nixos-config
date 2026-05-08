@@ -20,6 +20,10 @@
   home.homeDirectory = "/home/eriskii";
   home.stateVersion = "25.11";   # don't bump
 
+  home.sessionVariables = {
+    TERMINAL = "kitty";
+  };
+
   programs.home-manager.enable = true;
 
   # Dank Material Shell (Quickshell-based desktop shell)
