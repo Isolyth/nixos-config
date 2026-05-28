@@ -17,11 +17,20 @@ in {
     "matugen/templates/midnight-discord.css".source =
       "${matugenThemes}/templates/midnight-discord.css";
 
+    "matugen/templates/obsidian.css".source =
+      "${matugenThemes}/templates/obsidian.css";
+
     "matugen/config.toml".text = ''
-      # User templates appended to DMS's matugen run.
+      [config]
+      reload_apps = false
+
       [templates.vesktop]
       input_path = "~/.config/matugen/templates/midnight-discord.css"
       output_path = "~/.config/vesktop/themes/midnight-discord.css"
+
+      [templates.obsidian]
+      input_path = "~/.config/matugen/templates/obsidian.css"
+      output_path = "~/Documents/MainVault/.obsidian/snippets/matugen.css"
     '';
   };
 }

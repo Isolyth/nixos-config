@@ -31,6 +31,14 @@
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
+
+    # Import DMS's matugen-generated `@define-color` overrides into gtk-4.0/gtk.css
+    # so libadwaita apps pick up the wallpaper-derived palette. Absolute file://
+    # path is required because the generated gtk.css lives in /nix/store and a
+    # relative URL would resolve there, not in ~/.config/gtk-4.0.
+    gtk4.extraCss = ''
+      @import url("file:///home/eriskii/.config/gtk-4.0/dank-colors.css");
+    '';
   };
 
   # Qt — match system platform theme (qt6ct) so Qt apps follow our settings

@@ -71,6 +71,24 @@
         "text/x-kotlin" = "code.desktop";
         "text/x-nix" = "code.desktop";
 
+        # Gwenview: images
+        "image/jpeg" = "org.kde.gwenview.desktop";
+        "image/png" = "org.kde.gwenview.desktop";
+        "image/gif" = "org.kde.gwenview.desktop";
+        "image/webp" = "org.kde.gwenview.desktop";
+        "image/bmp" = "org.kde.gwenview.desktop";
+        "image/tiff" = "org.kde.gwenview.desktop";
+        "image/svg+xml" = "org.kde.gwenview.desktop";
+        "image/x-icon" = "org.kde.gwenview.desktop";
+        "image/vnd.microsoft.icon" = "org.kde.gwenview.desktop";
+        "image/heif" = "org.kde.gwenview.desktop";
+        "image/heic" = "org.kde.gwenview.desktop";
+        "image/avif" = "org.kde.gwenview.desktop";
+        "image/jxl" = "org.kde.gwenview.desktop";
+        "image/x-portable-pixmap" = "org.kde.gwenview.desktop";
+        "image/x-portable-bitmap" = "org.kde.gwenview.desktop";
+        "image/x-portable-graymap" = "org.kde.gwenview.desktop";
+
         # VLC: video
         "video/mp4" = "vlc.desktop";
         "video/x-matroska" = "vlc.desktop";

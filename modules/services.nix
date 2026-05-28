@@ -8,4 +8,6 @@
   services.printing.enable = false;
 
   hardware.bluetooth.enable = true;
+
+  services.linuxMagicForce.enable = true;
 }

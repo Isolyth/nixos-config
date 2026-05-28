@@ -44,8 +44,16 @@
       input = {
         kb_layout = "us";
         follow_mouse = 1;
-        sensitivity = 0;
-        touchpad.natural_scroll = false;
+        sensitivity = 0.3;
+        scroll_factor = 1.0;
+        touchpad = {
+          natural_scroll = true;
+          tap-to-click = true;
+          clickfinger_behavior = true;
+          disable_while_typing = false;
+          drag_lock = true;
+          scroll_factor = 0.3;
+        };
       };
 
       general = {
@@ -112,6 +120,30 @@
 
       cursor.no_hardware_cursors = 2;
       xwayland.force_zero_scaling = true;
+
+      # ── Touchpad gestures ──
+      # Hyprland 0.49+ declares the binding itself via `gesture =`; the
+      # `gestures { }` block now only carries tuning knobs. `use_r = true`
+      # walks relative workspaces (r+1/r-1) so swipes stay on the current
+      # monitor's workspace set instead of crossing to the other display.
+      gestures = {
+        workspace_swipe_distance = 500;          # px of finger travel to commit (was 300)
+        workspace_swipe_invert = true;           # natural-scroll direction
+        workspace_swipe_min_speed_to_force = 60; # speed needed for a flick to commit early (was 30)
+        workspace_swipe_cancel_ratio = 0.5;
+        # Hyprland 0.54's WorkspaceSwipeGesture::begin() refuses to start when the
+        # current monitor only has one workspace AND this flag is false — so the
+        # swipe silently does nothing. Setting true lets the swipe extend into a
+        # newly-created workspace at the edge.
+        workspace_swipe_create_new = true;
+        workspace_swipe_forever = false;
+        workspace_swipe_use_r = true;            # per-monitor (relative) workspaces
+      };
+
+      # 3-finger horizontal swipe → cycle workspaces.
+      gesture = [
+        "3, horizontal, workspace"
+      ];
 
       # ── Keybinds ──
       bind = [

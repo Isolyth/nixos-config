@@ -9,15 +9,18 @@
     ../../modules/audio.nix
     ../../modules/graphics.nix
     ../../modules/hyprland.nix
+    ../../modules/niri.nix
     ../../modules/fonts.nix
     ../../modules/nix-settings.nix
     ../../modules/services.nix
     ../../modules/desktop-services.nix
+    ../../modules/input.nix
     ../../modules/thunar.nix
     ../../modules/qt.nix
     ../../modules/power.nix
     ../../modules/swap.nix
     ../../modules/packages.nix
+    ../../modules/flatpak.nix
     ../../modules/home-manager.nix
   ];
 
