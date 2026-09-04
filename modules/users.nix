@@ -3,7 +3,7 @@
   users.users.eriskii = {
     isNormalUser = true;
     description = "eriskii";
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" "input" "render" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "audio" "input" "render" "dialout" ];
     shell = pkgs.zsh;
     # Set password after first boot:  passwd
   };

@@ -106,8 +106,10 @@
         ];
       };
 
+      # Hyprland 0.55.0 removed dwindle.pseudotile (it wasn't doing anything as
+      # a global default). Pseudotile is now per-window only — toggle via the
+      # `pseudo` dispatcher (bound below) or a `windowrule = pseudo, ...` match.
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -155,6 +157,7 @@
         "$mainMod, T, exec, kitty btop"
         "$mainMod, S, exec, hyprshot --freeze -m region"
         "$mainMod, J, layoutmsg, togglesplit"
+        "$mainMod, P, pseudo,"
         "$mainMod, L, exec, hyprlock"
         "$mainMod SHIFT, F, fullscreen,"
         "$mainMod, Escape, exec, dms ipc call powermenu toggle"

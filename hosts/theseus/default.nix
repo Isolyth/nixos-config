@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ../../modules/boot.nix
     ../../modules/networking.nix
+    ../../modules/tailscale.nix
     ../../modules/locale.nix
     ../../modules/users.nix
     ../../modules/audio.nix
@@ -20,6 +21,7 @@
     ../../modules/power.nix
     ../../modules/swap.nix
     ../../modules/packages.nix
+    ../../modules/virtualisation.nix
     ../../modules/llama-cpp.nix
     ../../modules/flatpak.nix
     ../../modules/home-manager.nix

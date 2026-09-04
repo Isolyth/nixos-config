@@ -69,7 +69,7 @@ in
 
   environment.systemPackages = with pkgs; [
     # Editors / dev
-    vim neovim git gh
+    vim neovim git gh cloc
     gcc gnumake cmake pkg-config
     rustup
     go

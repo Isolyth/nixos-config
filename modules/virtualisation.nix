@@ -1,19 +1,16 @@
 { pkgs, ... }:
 {
   # ── KVM/QEMU + libvirt ─────────────────────────────────────────────────────
-  # libvirtd pulls in qemu_kvm as its hypervisor backend. OVMF gives UEFI
-  # firmware for guests; swtpm provides emulated TPM 2.0 (Win11 needs it);
-  # virtiofsd enables shared-folder passthrough via virtio-fs.
+  # libvirtd pulls in qemu_kvm as its hypervisor backend. swtpm provides
+  # emulated TPM 2.0 (Win11 needs it); virtiofsd enables shared-folder
+  # passthrough via virtio-fs. OVMF UEFI firmware now ships with QEMU itself,
+  # so no separate `ovmf` submodule needed on current nixpkgs.
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
       package = pkgs.qemu_kvm;
       runAsRoot = true;
       swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [ pkgs.OVMFFull.fd ];
-      };
     };
   };
 
