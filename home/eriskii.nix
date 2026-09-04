@@ -10,6 +10,7 @@
     ./modules/theming.nix
     ./modules/clipboard.nix
     ./modules/claude-code.nix
+    ./modules/pi.nix
     ./modules/git.nix
     ./modules/zsh.nix
     ./modules/vscode.nix

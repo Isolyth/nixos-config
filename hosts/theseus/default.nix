@@ -20,6 +20,7 @@
     ../../modules/power.nix
     ../../modules/swap.nix
     ../../modules/packages.nix
+    ../../modules/llama-cpp.nix
     ../../modules/flatpak.nix
     ../../modules/home-manager.nix
   ];
