@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 let
   statuslineSrc = pkgs.fetchFromGitHub {
-    owner = "Isolyth";
+    owner = "Eriskii";
     repo = "claude-code-statusline";
     rev = "1dc3b96acc0925d74dd518360c398be6afe41021";
     hash = "sha256-S3JlWBiKjAbdTZRK4TJDQxpuKqabkpkzCtmsmM1gqIw=";

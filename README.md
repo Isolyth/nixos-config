@@ -21,7 +21,7 @@ Flake-based, modular. Targets a single host (`theseus`) with:
 ```sh
 # from NixOS live USB:
 nix-shell -p git
-git clone https://github.com/Isolyth/nixos-config /tmp/nixos-config
+git clone https://github.com/Eriskii/nixos-config /tmp/nixos-config
 cd /tmp/nixos-config
 
 # Generate hardware config for this machine

@@ -1,5 +1,5 @@
 {
-  description = "Isolyth's NixOS config";
+  description = "Eriskii's NixOS config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -46,7 +46,7 @@
     };
 
     linux-magic-force = {
-      url = "github:Isolyth/LinuxMagicForce";
+      url = "github:Eriskii/LinuxMagicForce";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -54,7 +54,7 @@
     # nixpkgs. Its overlay provides pkgs.claude-code. Bump the pinned version
     # with `bump-claude-code` (see modules/packages.nix).
     claude-code-nix = {
-      url = "github:Isolyth/claude-code-nix";
+      url = "github:Eriskii/claude-code-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

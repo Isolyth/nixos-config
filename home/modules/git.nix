@@ -7,8 +7,8 @@
 
     settings = {
       user = {
-        name = "Isolyth";
-        email = "13102203+Isolyth@users.noreply.github.com";
+        name = "Eriskii";
+        email = "13102203+Eriskii@users.noreply.github.com";
       };
 
       # Use gh CLI as the credential helper for github.com / gist.github.com.

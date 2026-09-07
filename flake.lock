@@ -10,13 +10,13 @@
       "locked": {
         "lastModified": 1784915536,
         "narHash": "sha256-HxmsOWotPFniJrVVPN1kkn4+DbC7BUFyTJCQ1CWMHR4=",
-        "owner": "Isolyth",
+        "owner": "Eriskii",
         "repo": "claude-code-nix",
         "rev": "cea548ebf6e2b92faaaadbaba8729fbcce19c25e",
         "type": "github"
       },
       "original": {
-        "owner": "Isolyth",
+        "owner": "Eriskii",
         "repo": "claude-code-nix",
         "type": "github"
       }
@@ -126,13 +126,13 @@
       "locked": {
         "lastModified": 1786910495,
         "narHash": "sha256-DNBVEc6JsPZ+aBxnuxi1NEHTNXeJ0aCM4LBEZOjleMM=",
-        "owner": "Isolyth",
+        "owner": "Eriskii",
         "repo": "LinuxMagicForce",
         "rev": "b18180f0a71074d1eca0aeeaf8d540a05686a333",
         "type": "github"
       },
       "original": {
-        "owner": "Isolyth",
+        "owner": "Eriskii",
         "repo": "LinuxMagicForce",
         "type": "github"
       }

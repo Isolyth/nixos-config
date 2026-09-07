@@ -3,7 +3,7 @@ let
   # claude-code comes from the claude-code-nix flake input (overlay in
   # flake.nix). Pull whatever version that flake currently pins by updating the
   # input. To jump to a brand-new release, bump the pin in the claude-code-nix
-  # repo first (`nix run github:Isolyth/claude-code-nix#bump -- <version>`),
+  # repo first (`nix run github:Eriskii/claude-code-nix#bump -- <version>`),
   # then run this.
   bump-claude-code = pkgs.writeShellApplication {
     name = "bump-claude-code";
